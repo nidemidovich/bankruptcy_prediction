@@ -32,7 +32,7 @@ def make_cases(path):
                 for key in keys: cases[key].append('n/a')
 
                 cases['inn'].append(int(record['inn']))
-            
+                
             else:
                 for case in record['cases_list']:
                     sides = []
@@ -45,6 +45,7 @@ def make_cases(path):
                     for key in keys: cases[key].extend([case[key] for _ in range(len(sides))])
                     
                     cases['inn'].extend([int(record['inn']) for _ in range(len(sides))])
+                    cases['caseType'].extend(case['caseType']['code'] for _ in range(len(sides)))
                     cases['type'].extend(sides)
     
     return cases
