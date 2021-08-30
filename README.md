@@ -1,4 +1,4 @@
-# tochka_test_task
+# Bankruptcy prediction
 
 This repository contains the solution of the test task for the position of Junior Data Scientist to the Tochka bank.
 
